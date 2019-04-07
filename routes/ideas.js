@@ -37,6 +37,10 @@ router.get("/",ensureAuthenticated,(req,res)=>{
 router.get("/add",ensureAuthenticated,(req,res)=>{
 	res.render("ideas/add");	
 })
+router.get("/about",ensureAuthenticated,(req,res)=>{
+	res.render("ideas/about");	
+})
+
 
 //编辑的路由
 router.get("/edit/:id",ensureAuthenticated,(req,res)=>{

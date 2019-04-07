@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<br /><br />
+		<div class="show-book">
+			参考书籍:
+			<br />
+			______________________________________________________________________________________________________________________________________
+		</div>
+		<br /><br />
+		<!--图片展示部分-->
+		<div class="row">
+		  <div class="col-sm-12 col-md-4" style="width: 13rem;">
+			<div class="col-sm-12 col-md-6" style="width: 13rem;">
+				<a href="#">
+			  <img class="card-img-top" src="/image/s1.jpg" alt="Card image cap">
+			  	</a>
+			  <div class="card-body">
+			    <p class="card-title">世界史纲</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+		  </div>
+		  	<!--第2张-->
+		  	<div class="col-sm-12 col-md-6" style="width: 13rem;">
+		  		<a href="#">
+		  			<img class="card-img-top" src="/image/s2.jpg" alt="Card image cap">
+		  		</a>
+			  <div class="card-body">
+			    <p class="card-title">机器知行学...</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+			</div>
+		</div>
+		
+		 <div class="col-sm-12 col-md-4" style="width: 13rem;">
+			<div class="col-sm-12 col-md-6" style="width: 13rem;">
+				<a href="#">
+			  <img class="card-img-top" src="/image/s3.jpg" alt="Card image cap">
+			  	</a>
+			  <div class="card-body">
+			    <p class="card-title">"心迹"的计算</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+		  </div>
+		  	<!--第2张-->
+		  	<div class="col-sm-12 col-md-6" style="width: 13rem;">
+		  		<a href="#">
+			  <img class="card-img-top" src="/image/s4.jpg" alt="Card image cap">
+			  	</a>
+			  <div class="card-body">
+			    <p class="card-title">人工智能的...</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+			</div>
+		</div>
+		
+		 <div class="col-sm-12 col-md-4" style="width: 13rem;">
+			<div class="col-sm-12 col-md-6" style="width: 13rem;">
+				<a href="#">
+			  <img class="card-img-top" src="/image/s5.jpg" alt="Card image cap">
+			  	</a>
+			  <div class="card-body">
+			    <p class="card-title">机器人制作</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+		  </div>
+		  	<!--第2张-->
+		  	<div class="col-sm-12 col-md-6" style="width: 13rem;">
+		  		<a href="#">
+			  <img class="card-img-top" src="/image/s6.jpg" alt="Card image cap">
+			  	</a>
+			  <div class="card-body">
+			    <p class="card-title">进化论的影...</p>
+			    <p class="card-text">介绍：</p>
+		  	</div>
+			</div>
+		</div>
+		</div>
+		<br /><br />
+		<div class="stu-say">
+			学生评价:
+			<br />
+			______________________________________________________________________________________________________________________________________
+		</div>
+		
+		<div class="say">
+			<div class="stu1">
+				<ul>
+					<li>大鹏 
+					<img src="/image/star1.png"/>
+					</li>
+					
+					<li><span>老师讲的非常好！！！     点赞</span></li>
+					<li class="time">2019-3-17 12:17:08</li>
+				</ul>
+			</div>
+			<div class="stu1">
+				<ul>
+					<li>大鹏2 
+					<img src="/image/star2.png"/>
+					</li>
+					
+					<li><span>喜欢！！！！</span></li>
+					<li class="time">2019-4-2 19:30:18</li>
+				</ul>
+			</div>
+			<div class="stu1">
+				<ul>
+					<li>大鹏3 
+					<img src="/image/star1.png"/>
+					</li>
+					
+					<li><span>Very good！</span></li>
+					<li class="time">2019-4-5 9:17:08</li>
+				</ul>
+			</div>
+			
+			<div id="me" style="display: none;">
+				<ul>
+					<li><span style="color: skyblue;">我</span>
+					<img src="/image/star1.png"/>
+					</li>
+					
+					<p id="demon"></p>
+					<li class="time" id="metime"></li>
+				</ul>
+			</div>
+		</div>
+		
+		<br />
+		<div id="inp" style="display: block;">
+			<input class="form-control" id="pj" type="text" placeholder="请输入您想添加的评价" />
+			<br />
+			<button class="btn" onclick="add()">  添加评价</button>
+		</div>
+		<br /><br /><br />
+	</body>
+</html>
+
+
+<script type="text/javascript">
+	var me=document.getElementById("me");
+	var metime=document.getElementById("metime");
+	var inp=document.getElementById("inp");
+	var date = new Date();  
+    var date_value=date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+	function add(){
+		var pj = document.getElementById("pj").value;
+		document.getElementById("demon").innerHTML=pj;
+		metime.innerHTML=date_value;
+		me.style.display="block";
+		inp.style.display="none";
+	}
+</script>
+
+<style type="text/css" scoped>
+	.card-img-top{
+		height: 160px ;
+		width: 117px ;
+	}
+	.card-text{
+		font-size: x-small;
+		color: #999999;
+	}
+	.stu1 ul li{
+		list-style: none;
+	}
+	#me li{
+		list-style: none;
+	}
+	.time{
+		font-size: x-small;
+		color: #999999;
+	}
+	.btn{
+		position: absolute;
+		background: url(/image/notes.png) no-repeat;
+		padding: 5px;
+		margin: 5px;
+		width: 110px;
+		color: greenyellow;
+		border: 1px solid greenyellow;
+		border-radius: 3px;
+		left: 300px;
+	}
+</style>

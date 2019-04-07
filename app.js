@@ -21,7 +21,8 @@ const {ensureAuthenticated}=require("./helpers/auth");
 require("./config/passport")(passport);
 
 //连接数据库  生产环境也不能直接连接本地的数据库
-mongoose.connect(db.mongoURL)
+//mongoose.connect(db.mongoURL)
+mongoose.connect("mongodb://localhost/node-app")
 		.then(()=>{
 			console.log("MongoDB connect success....");
 		})
